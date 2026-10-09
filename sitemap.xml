@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.example.com/</loc>
+    <loc>https://kopfsteinpflaster.github.io/</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.example.com/spielwelt.html</loc>
+    <loc>https://kopfsteinpflaster.github.io/spielwelt.html</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.example.com/charaktere.html</loc>
+    <loc>https://kopfsteinpflaster.github.io/charaktere.html</loc>
     <lastmod>2026-09-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.example.com/regeln.html</loc>
+    <loc>https://kopfsteinpflaster.github.io/regeln.html</loc>
     <lastmod>2026-09-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.example.com/kontakt.html</loc>
+    <loc>https://kopfsteinpflaster.github.io/kontakt.html</loc>
     <lastmod>2026-09-20</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.example.com/impressum.html</loc>
+    <loc>https://kopfsteinpflaster.github.io/impressum.html</loc>
     <lastmod>2026-09-20</lastmod>
     <priority>0.3</priority>
   </url>
