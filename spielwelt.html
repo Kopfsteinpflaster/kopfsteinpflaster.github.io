@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Syne+Mono&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="bilder/tentacle_skull.png">
     <script src="nav.js" defer></script>
     <script src="glitch.js" defer></script>
+    <script src="carousel.js" defer></script>
 </head>
 
 <body>
@@ -228,7 +229,20 @@
             </p>
 
         </div>
-        <div class="row">
+        <section class="carousel" aria-roledescription="Karussell" aria-label="Glossar">
+            <div class="carousel-controls">
+                <button class="carousel-btn" type="button" data-carousel-prev aria-label="Vorherige Einträge">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="carousel-status">
+                    <div class="carousel-dots"></div>
+                    <span class="carousel-count" aria-live="polite"></span>
+                </div>
+                <button class="carousel-btn" type="button" data-carousel-next aria-label="Nächste Einträge">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        <div class="carousel-track" tabindex="0">
             <div>
                 <h3 class="subheader">Das Berlin-Paradox</h3>
                 <p>
@@ -276,8 +290,6 @@
                     Viele Magier verlieren sich in ihrer Sucht nach Macht und Wissen, bis ihr Körper entstellt und ihr Geist zerrissen ist.
                 </p>
             </div>
-        </div>
-        <div class="row">
             <div>
                 <h3 class="subheader">Seltsame Wissenschaften</h3>
                 <p>
@@ -324,8 +336,6 @@
                     verschlungen.
                 </p>
             </div>
-        </div>
-        <div class="row">
             <div>
                 <h3 class="subheader">Alte Götzen</h3>
                 <p>
@@ -370,6 +380,19 @@
                 </p>
             </div>
         </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn" type="button" data-carousel-prev aria-label="Vorherige Einträge">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="carousel-status">
+                    <div class="carousel-dots"></div>
+                    <span class="carousel-count" aria-live="polite"></span>
+                </div>
+                <button class="carousel-btn" type="button" data-carousel-next aria-label="Nächste Einträge">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        </section>
         <h2 class="subheader">Wichtige Personen</h2>
         <div class="row">
             <div>
