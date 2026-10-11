@@ -426,10 +426,8 @@ main li::marker {
 .bark {
     width: min(60ch, calc(100% - 2rem));
     margin: clamp(3rem, 7vw, 5rem) auto 0;
+    --karte: var(--pflaster);
     padding: clamp(1.5rem, 4vw, 2.75rem);
-    background: var(--pflaster);
-    border: 1px solid var(--kante);
-    box-shadow: 0 1.5rem 3rem -1.5rem rgba(0, 0, 0, 0.9);
     font-size: clamp(1.2rem, 0.45vw + 1.1rem, 1.4rem);
     line-height: 1.7;
     transform: rotate(-0.4deg);
@@ -521,9 +519,8 @@ main li::marker {
 
 .row > div,
 .carousel-track > div {
-    padding: 1.5rem 1.5rem 1.25rem;
-    background: rgba(21, 21, 23, 0.94);
-    border: 1px solid var(--kante);
+    --karte: rgba(21, 21, 23, 0.94);
+    padding: 1.75rem 1.6rem 1.6rem;
     text-align: left;
     font-size: 1.08rem;
     line-height: 1.6;
@@ -555,6 +552,49 @@ main li::marker {
     width: 2.5rem;
     height: 3px;
     background: var(--blut);
+}
+
+/* ==========================================================================
+   Schiefe Karten
+   Die Karte selbst trägt die Randfarbe, ::before legt die Füllung 1px
+   eingerückt mit derselben Form darüber. So bleibt der Rand auch an
+   schrägen Kanten sichtbar.
+   ========================================================================== */
+
+.row > div,
+.carousel-track > div,
+.bark,
+.bezirk-info {
+    --ecken: polygon(0 10px, calc(100% - 6px) 0, 100% calc(100% - 14px), 12px 100%);
+    position: relative;
+    isolation: isolate;
+    background: #45454d;
+    border: 0;
+    clip-path: var(--ecken);
+}
+
+.row > div:nth-child(3n+2),
+.carousel-track > div:nth-child(3n+2),
+.bark:nth-child(3n+2) {
+    --ecken: polygon(9px 0, 100% 14px, calc(100% - 10px) 100%, 0 calc(100% - 7px));
+}
+
+.row > div:nth-child(3n+3),
+.carousel-track > div:nth-child(3n+3),
+.bark:nth-child(3n+3) {
+    --ecken: polygon(0 0, calc(100% - 14px) 9px, 100% 100%, 6px calc(100% - 16px));
+}
+
+.row > div::before,
+.carousel-track > div::before,
+.bark::before,
+.bezirk-info::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    background: var(--karte);
+    clip-path: var(--ecken);
 }
 
 /* ==========================================================================
@@ -753,11 +793,18 @@ main li::marker {
 .bezirk-info {
     margin: 2rem auto 0;
     max-width: 600px;
-    padding: 1.5rem 1.75rem;
-    background: var(--pflaster);
-    border: 1px solid var(--kante);
-    border-top: 3px solid var(--blut);
+    --karte: var(--pflaster);
+    padding: 1.75rem 1.75rem 1.5rem;
     text-align: left;
+}
+
+/* roter Akzent folgt der schiefen Oberkante: die Füllung beginnt tiefer */
+.bezirk-info.bezirk-info {
+    background: linear-gradient(var(--blut) 0 18px, #45454d 18px);
+}
+
+.bezirk-info::before {
+    top: 4px;
 }
 
 .bezirk-info h3 {
